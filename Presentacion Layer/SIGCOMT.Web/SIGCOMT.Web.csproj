@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02ED4F00-F91B-4125-A6AE-F96F01BF8EBA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGCOMT.Web</RootNamespace>
+    <AssemblyName>SIGCOMT.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <DontImportPostSharp>True</DontImportPostSharp>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PostSharp">
+      <HintPath>..\..\packages\PostSharp.3.1.52\lib\net20\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\..\packages\structuremap.3.1.4.143\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Core\Aspects\ControllerAttribute.cs" />
+    <Compile Include="Core\Aspects\GetControllerMethod.cs" />
+    <Compile Include="Core\Aspects\IControllerMethod.cs" />
+    <Compile Include="Core\Aspects\PostControllerMethod.cs" />
+    <Compile Include="Core\Aspects\TipoAccionControlador.cs" />
+    <Compile Include="Core\BaseController.cs" />
+    <Compile Include="Core\Constantes.cs" />
+    <Compile Include="Core\HttpGetAction.cs" />
+    <Compile Include="Core\WebSession.cs" />
+    <Compile Include="Core\WebUtils.cs" />
+    <Compile Include="Filters\WebSessionFilter.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AuthenticationHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\ace-fonts.css" />
+    <Content Include="Content\css\ace-ie.css" />
+    <Content Include="Content\css\ace-part2.css" />
+    <Content Include="Content\css\ace.css" />
+    <Content Include="Content\css\ace.min.css" />
+    <Content Include="Content\css\bootstrap-tagsinput.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\chosen.css" />
+    <Content Include="Content\css\custom.css" />
+    <Content Include="Content\css\dataTables.bootstrap.css" />
+    <Content Include="Content\css\datepicker.css" />
+    <Content Include="Content\css\datepicker.min.css" />
+    <Content Include="Content\css\daterangepicker.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\fullcalendar.css" />
+    <Content Include="Content\css\images\border.png" />
+    <Content Include="Content\css\images\border1.png" />
+    <Content Include="Content\css\images\border2.png" />
+    <Content Include="Content\css\images\controls.png" />
+    <Content Include="Content\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="Content\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="Content\css\images\ie6\borderBottomRight.png" />
+    <Content Include="Content\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="Content\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="Content\css\images\ie6\borderTopCenter.png" />
+    <Content Include="Content\css\images\ie6\borderTopLeft.png" />
+    <Content Include="Content\css\images\ie6\borderTopRight.png" />
+    <Content Include="Content\css\images\loading.gif" />
+    <Content Include="Content\css\images\loading_background.png" />
+    <Content Include="Content\css\images\meteorshower.jpg" />
+    <Content Include="Content\css\images\meteorshower2.jpg" />
+    <Content Include="Content\css\images\overlay.png" />
+    <Content Include="Content\css\images\pattern.jpg" />
+    <Content Include="Content\css\images\pattern.png" />
+    <Content Include="Content\css\images\spritemap%402x.png" />
+    <Content Include="Content\css\images\spritemap.png" />
+    <Content Include="Content\css\img\alpha.png" />
+    <Content Include="Content\css\img\chosen-sprite%402x.png" />
+    <Content Include="Content\css\img\chosen-sprite.png" />
+    <Content Include="Content\css\img\fondo.png" />
+    <Content Include="Content\css\img\fondo1.png" />
+    <Content Include="Content\css\img\hue.png" />
+    <Content Include="Content\css\img\saturation.png" />
+    <Content Include="Content\css\img\uploadify-cancel.png" />
+    <Content Include="Content\css\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Content\css\jquery-ui-timepicker-addon.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\jquery-ui.custom.css" />
+    <Content Include="Content\css\jquery-ui.min.css" />
+    <Content Include="Content\css\jquery.dataTables.css" />
+    <Content Include="Content\css\jquery.dataTables.min.css" />
+    <Content Include="Content\css\jquery.dataTables2.css" />
+    <Content Include="Content\css\jquery.gritter.css" />
+    <Content Include="Content\css\jquery.multiselect.css" />
+    <Content Include="Content\css\jquery.multiselect.filter.css" />
+    <Content Include="Content\css\jquery.tagsinput.css" />
+    <Content Include="Content\css\tabContentCustomer.css" />
+    <Content Include="Content\css\ui.jqgrid.css" />
+    <Content Include="Content\css\uploadify.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\avatar2.png" />
+    <Content Include="Content\images\banco-falabella.jpg" />
+    <Content Include="Content\images\banco-falabella.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\fondo.png" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logosaga.gif" />
+    <Content Include="Content\images\sort_asc.png" />
+    <Content Include="Content\images\sort_asc_disabled.png" />
+    <Content Include="Content\images\sort_both.png" />
+    <Content Include="Content\images\sort_desc.png" />
+    <Content Include="Content\images\sort_desc_disabled.png" />
+    <Content Include="Content\images\upload.png" />
+    <Content Include="Content\js\ace-extra.js" />
+    <Content Include="Content\js\ace\ace.ajax-content.js" />
+    <Content Include="Content\js\ace\ace.auto-container.js" />
+    <Content Include="Content\js\ace\ace.auto-padding.js" />
+    <Content Include="Content\js\ace\ace.js" />
+    <Content Include="Content\js\ace\ace.onpage-help.js" />
+    <Content Include="Content\js\ace\ace.searchbox-autocomplete.js" />
+    <Content Include="Content\js\ace\ace.settings-rtl.js" />
+    <Content Include="Content\js\ace\ace.settings-skin.js" />
+    <Content Include="Content\js\ace\ace.settings.js" />
+    <Content Include="Content\js\ace\ace.sidebar-scroll-1.js" />
+    <Content Include="Content\js\ace\ace.sidebar-scroll-2.js" />
+    <Content Include="Content\js\ace\ace.sidebar.js" />
+    <Content Include="Content\js\ace\ace.submenu-hover.js" />
+    <Content Include="Content\js\ace\ace.touch-drag.js" />
+    <Content Include="Content\js\ace\ace.widget-box.js" />
+    <Content Include="Content\js\ace\ace.widget-on-reload.js" />
+    <Content Include="Content\js\ace\elements.aside.js" />
+    <Content Include="Content\js\ace\elements.colorpicker.js" />
+    <Content Include="Content\js\ace\elements.fileinput.js" />
+    <Content Include="Content\js\ace\elements.onpage-help.js" />
+    <Content Include="Content\js\ace\elements.scroller.js" />
+    <Content Include="Content\js\ace\elements.spinner.js" />
+    <Content Include="Content\js\ace\elements.treeview.js" />
+    <Content Include="Content\js\ace\elements.typeahead.js" />
+    <Content Include="Content\js\ace\elements.wizard.js" />
+    <Content Include="Content\js\ace\elements.wysiwyg.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\DataTables\datatables.css" />
+    <Content Include="Content\js\DataTables\dataTables.editor.js" />
+    <Content Include="Content\js\DataTables\dataTables.editor.min.css" />
+    <Content Include="Content\js\DataTables\dataTables.editor.min.js" />
+    <Content Include="Content\js\DataTables\datatables.js" />
+    <Content Include="Content\js\DataTables\datatables.min.css" />
+    <Content Include="Content\js\DataTables\datatables.min.js" />
+    <Content Include="Content\js\date-time\bootstrap-datepicker.js" />
+    <Content Include="Content\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="Content\js\date-time\bootstrap-datetimepicker.js" />
+    <Content Include="Content\js\date-time\bootstrap-timepicker.js" />
+    <Content Include="Content\js\date-time\daterangepicker.js" />
+    <Content Include="Content\js\date-time\languages\bootstrap-datepicker.es.min.js" />
+    <Content Include="Content\js\date-time\moment.js" />
+    <Content Include="Content\js\html5shiv.js" />
+    <Content Include="Content\js\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Content\js\jquery-ui-timepicker-addon.js" />
+    <Content Include="Content\js\jquery-ui.custom.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.blockUI.js" />
+    <Content Include="Content\js\jquery.gritter.js" />
+    <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\js\jquery.mobile.custom.js" />
+    <Content Include="Content\js\jquery.multiselect.filter.js" />
+    <Content Include="Content\js\jquery.multiselect.js" />
+    <Content Include="Content\js\jquery.validate.min.js" />
+    <Content Include="Content\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\js\jquery1x.js" />
+    <Content Include="Content\js\respond.js" />
+    <Content Include="Content\js\ui.datepicker-es.js" />
+    <Content Include="Content\js\viewsJs\carteraCastigadaReport.js" />
+    <Content Include="Content\js\viewsJs\carteraRefinanciadaReport.js" />
+    <Content Include="Content\js\viewsJs\contencionReport.js" />
+    <Content Include="Content\js\viewsJs\home.js" />
+    <Content Include="Content\js\viewsJs\login.js" />
+    <Content Include="Content\js\viewsJs\main.js" />
+    <Content Include="Content\js\viewsJs\productividadReport.js" />
+    <Content Include="Content\js\viewsJs\rollRatesReport.js" />
+    <Content Include="Content\js\webApp.js" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Global.asax" />
+    <Content Include="images\close-white.png" />
+    <Content Include="images\droparrows.png" />
+    <Content Include="images\logo-primary.png" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\select2-spinner.gif" />
+    <Content Include="images\select2.png" />
+    <Content Include="images\sort_asc.png" />
+    <Content Include="images\sort_asc_disabled.png" />
+    <Content Include="images\sort_both.png" />
+    <Content Include="images\sort_desc.png" />
+    <Content Include="images\sort_desc_disabled.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application Layer\SIGCOMT.DTO\SIGCOMT.DTO.csproj">
+      <Project>{f2dbf062-aa20-4db9-ad01-71ce2a74119d}</Project>
+      <Name>SIGCOMT.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Domain Layer\SIGCOMT.Domain\SIGCOMT.Domain.csproj">
+      <Project>{f24f1b4d-0a22-49be-a252-450d3f42c517}</Project>
+      <Name>SIGCOMT.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Persistence Layer\SIGCOMT.Persistence\SIGCOMT.Persistence.csproj">
+      <Project>{1e63dbb3-65e5-49ff-b733-1a2cf7f4d83c}</Project>
+      <Name>SIGCOMT.Persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services Layer\SIGCOMT.BusinessLogic\SIGCOMT.BusinessLogic.csproj">
+      <Project>{20f8c763-7c9a-4bf0-8bef-9031b15d2c33}</Project>
+      <Name>SIGCOMT.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Transversal Layer\SIGCOMT.Aspects\SIGCOMT.Aspects.csproj">
+      <Project>{07c6face-af04-4e42-a202-ca600280ee34}</Project>
+      <Name>SIGCOMT.Aspects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Transversal Layer\SIGCOMT.Cache\SIGCOMT.Cache.csproj">
+      <Project>{495aede1-810c-49fb-a9d7-3cb472104ef2}</Project>
+      <Name>SIGCOMT.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Transversal Layer\SIGCOMT.Common\SIGCOMT.Common.csproj">
+      <Project>{e2803c4f-dcab-4145-8b7e-22ebff36dd0d}</Project>
+      <Name>SIGCOMT.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Transversal Layer\SIGCOMT.IoC\SIGCOMT.IoC.csproj">
+      <Project>{2b775dd5-1e6c-402c-8596-64499e37fbd0}</Project>
+      <Name>SIGCOMT.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Transversal Layer\SIGCOMT.Resources\SIGCOMT.Resources.csproj">
+      <Project>{7c829be7-0af2-432a-bfd3-6f4a697af4b7}</Project>
+      <Name>SIGCOMT.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Usuario\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Error\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutAccount.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\OpenSans-300.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\OpenSans-400.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\js\ace\readme" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\js\ace\scripts.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\js\DataTables\languages\dataTables.es.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>27345</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6072/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Habilite la restauración del paquete NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\PostSharp.3.1.52\tools\PostSharp.targets" Condition="Exists('..\..\packages\PostSharp.3.1.52\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\..\packages\PostSharp.3.1.52\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\..\packages\PostSharp.3.1.52\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,295 @@
+2014-06-26 01:25:13,065 [7] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:13,518 [7] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:14,155 [27] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:19,119 [7] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:19,723 [41] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:20,006 [7] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:20,390 [38] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:20,703 [42] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:25:47,169 [41] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:26:03,419 [42] ERROR  [(null)] - Controlador:ReporteVenta  Action:GetReporteResumenVentas  Mensaje:The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type.
+2014-06-26 01:26:53,068 [7] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:27:01,776 [37] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:27:32,277 [43] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: The cast to value type 'System.Decimal' failed because the materialized value is null. Either the result type's generic parameter or the query must use a nullable type. Trace:    en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.ErrorHandlingValueReader`1.GetValue(DbDataReader reader, Int32 ordinal)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper.GetColumnValueWithErrorHandling[TColumn](Int32 ordinal)
+   en lambda_method(Closure , Shaper )
+   en System.Data.Entity.Core.Common.Internal.Materialization.Coordinator`1.ReadNextElement(Shaper shaper)
+   en System.Data.Entity.Core.Common.Internal.Materialization.Shaper`1.SimpleEnumerator.MoveNext()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en VOGUE.Business.Logic.ReporteBL`1.EjecutarQuerySql(String query) en d:\Proyectos\VOGUE\Source\Services Layer\VIPAC.Business.Logic\ReporteBL.cs:línea 23
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>z__OriginalMethod(String fechaInicio, String fechaFin) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\ReporteVentaController.cs:línea 195
+   en VOGUE.Web.Areas.Administracion.Controllers.ReporteVentaController.<ReporteResumenVentasData>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 55
+2014-06-26 01:36:22,219 [64] ERROR VOGUE.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: Referencia a objeto no establecida como instancia de un objeto. Trace:    en VOGUE.Converter.VentaConverter.GetDetalleVenta(Venta ventaDomain) en d:\Proyectos\VOGUE\Source\Application Layer\VIPAC.Converter\VentaConverter.cs:línea 222
+   en VOGUE.Web.Areas.Administracion.Controllers.VentaController.<VerDetalleVenta>z__OriginalMethod(Int32 id) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Areas\Administracion\Controllers\VentaController.cs:línea 184
+   en VOGUE.Web.Areas.Administracion.Controllers.VentaController.<VerDetalleVenta>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en VOGUE.Web.Core.Aspects.ControllerAttribute.OnInvoke(MethodInterceptionArgs args) en d:\Proyectos\VOGUE\Source\Presentation Layer\VOGUE.Web\Core\Aspects\ControllerAttribute.cs:línea 34
+2014-09-17 11:23:41,494 [11] ERROR  [(null)] - Mensaje: The underlying provider failed on Open. Trace:    en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   en System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   en System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   en OSSE.Persistence.Core.RepositoryWithTypedId`2.FindOne(IQuerySpecification`1 specification) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Persistence Layer\OSSE.Persistence\Core\RepositoryWithTypedId.cs:línea 68
+   en OSSE.Persistence.Core.RepositoryWithTypedId`2.FindOne(Expression`1 expression) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Persistence Layer\OSSE.Persistence\Core\RepositoryWithTypedId.cs:línea 73
+   en OSSE.BusinessLogic.UsuarioBL.Get(Expression`1 where) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.BusinessLogic\UsuarioBL.cs:línea 32
+   en OSSE.Service.Core.Providers.DbMembershipProvider.CheckPassword(String username, String password, Boolean updateLastLoginActivityDate, Usuario& user) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.Service\Core\Providers\DbMembershipProvider.cs:línea 457
+   en OSSE.Service.Core.Providers.DbMembershipProvider.ValidateUser(String username, String password) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.Service\Core\Providers\DbMembershipProvider.cs:línea 422
+   en OSSE.Service.AccountMembershipService.ValidateUser(String userName, String password) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.Service\AccountMembershipService.cs:línea 44
+   en OSSE.Web.Controllers.AccountController.Login(LogOnModel model, String returnUrl) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Presentacion Layer\OSSE.Web\Controllers\AccountController.cs:línea 83
+2014-09-17 11:23:47,550 [9] ERROR  [(null)] - Mensaje: The underlying provider failed on Open. Trace:    en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__2[TResult](IEnumerable`1 sequence)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   en System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   en System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   en System.Linq.Queryable.SingleOrDefault[TSource](IQueryable`1 source)
+   en OSSE.Persistence.Core.RepositoryWithTypedId`2.FindOne(IQuerySpecification`1 specification) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Persistence Layer\OSSE.Persistence\Core\RepositoryWithTypedId.cs:línea 68
+   en OSSE.Persistence.Core.RepositoryWithTypedId`2.FindOne(Expression`1 expression) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Persistence Layer\OSSE.Persistence\Core\RepositoryWithTypedId.cs:línea 73
+   en OSSE.BusinessLogic.UsuarioBL.Get(Expression`1 where) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.BusinessLogic\UsuarioBL.cs:línea 32
+   en OSSE.Service.Core.Providers.DbMembershipProvider.CheckPassword(String username, String password, Boolean updateLastLoginActivityDate, Usuario& user) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.Service\Core\Providers\DbMembershipProvider.cs:línea 457
+   en OSSE.Service.Core.Providers.DbMembershipProvider.ValidateUser(String username, String password) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.Service\Core\Providers\DbMembershipProvider.cs:línea 422
+   en OSSE.Service.AccountMembershipService.ValidateUser(String userName, String password) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Services Layer\OSSE.Service\AccountMembershipService.cs:línea 44
+   en OSSE.Web.Controllers.AccountController.Login(LogOnModel model, String returnUrl) en d:\Proyectos\Template 01\Template_OSSE\OSSE 1.0\Presentacion Layer\OSSE.Web\Controllers\AccountController.cs:línea 83
+2014-09-22 12:42:31,573 [7] ERROR  [(null)] - Las credenciales especificadas son incorrectas.
+2014-09-22 12:42:32,922 [5] ERROR  [(null)] - Las credenciales especificadas son incorrectas.
+2014-09-22 14:32:33,756 [7] ERROR  [(null)] - Las credenciales especificadas son incorrectas.
+2014-09-22 14:32:35,170 [10] ERROR  [(null)] - Las credenciales especificadas son incorrectas.
+2014-09-22 16:57:20,374 [19] ERROR  [(null)] - Las credenciales especificadas son incorrectas.
+2014-09-22 17:00:40,110 [19] ERROR  [(null)] - Las credenciales especificadas son incorrectas.
+2014-10-10 11:25:53,594 [36] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:Las siguientes secciones se han definido, pero no se han presentado para la página de diseño "~/Views/Shared/_LayoutPage1.cshtml": "ScriptContent".
+2014-10-10 11:26:18,958 [6] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:Las siguientes secciones se han definido, pero no se han presentado para la página de diseño "~/Views/Shared/_LayoutPage1.cshtml": "ScriptContent".
+2014-10-10 14:53:29,640 [6] ERROR  [(null)] - Controlador:Load  Action:Listar  Mensaje:Se detectó una referencia circular al serializar un objeto de tipo 'System.Data.Entity.DynamicProxies.Formulario_160F45F98BCC62D75D970C13F914F53184ED8A67388D3C0E66B28E697C929F63'.
+2014-10-21 17:52:57,494 [7] ERROR SIGCOMT.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: LINQ to Entities does not recognize the method 'Int32 GetNumberValue(System.Enum)' method, and this method cannot be translated into a store expression. Trace:    en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.DefaultTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en SIGCOMT.BusinessLogic.FormularioBL.FindAll(Expression`1 where) en d:\Proyectos\Template 02\OSSE 1.0\Services Layer\SIGCOMT.BusinessLogic\FormularioBL.cs:línea 50
+   en SIGCOMT.Web.Areas.Administracion.Controllers.FormularioController.<Index>z__OriginalMethod() en d:\Proyectos\Template 02\OSSE 1.0\Presentacion Layer\SIGCOMT.Web\Areas\Administracion\Controllers\FormularioController.cs:línea 30
+   en SIGCOMT.Web.Areas.Administracion.Controllers.FormularioController.<Index>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en SIGCOMT.Web.Core.Aspects.GetControllerMethod.Procesar(MethodInterceptionArgs args, ILog log) en d:\Proyectos\Template 02\OSSE 1.0\Presentacion Layer\SIGCOMT.Web\Core\Aspects\GetControllerMethod.cs:línea 14
+2014-10-21 17:53:51,005 [7] ERROR SIGCOMT.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: LINQ to Entities does not recognize the method 'Int32 GetNumberValue(System.Enum)' method, and this method cannot be translated into a store expression. Trace:    en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.DefaultTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.EqualsTranslator.TypedTranslate(ExpressionConverter parent, BinaryExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateLambda(LambdaExpression lambda, DbExpression input, DbExpressionBinding& binding)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, DbExpression& source, DbExpressionBinding& sourceBinding, DbExpression& lambda)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.OneLambdaTranslator.Translate(ExpressionConverter parent, MethodCallExpression call)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.SequenceMethodTranslator.Translate(ExpressionConverter parent, MethodCallExpression call, SequenceMethod sequenceMethod)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.MethodCallTranslator.TypedTranslate(ExpressionConverter parent, MethodCallExpression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TypedTranslator`1.Translate(ExpressionConverter parent, Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.TranslateExpression(Expression linq)
+   en System.Data.Entity.Core.Objects.ELinq.ExpressionConverter.Convert()
+   en System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en SIGCOMT.BusinessLogic.FormularioBL.FindAll(Expression`1 where) en d:\Proyectos\Template 02\OSSE 1.0\Services Layer\SIGCOMT.BusinessLogic\FormularioBL.cs:línea 50
+   en SIGCOMT.Web.Areas.Administracion.Controllers.FormularioController.<Index>z__OriginalMethod() en d:\Proyectos\Template 02\OSSE 1.0\Presentacion Layer\SIGCOMT.Web\Areas\Administracion\Controllers\FormularioController.cs:línea 30
+   en SIGCOMT.Web.Areas.Administracion.Controllers.FormularioController.<Index>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en SIGCOMT.Web.Core.Aspects.GetControllerMethod.Procesar(MethodInterceptionArgs args, ILog log) en d:\Proyectos\Template 02\OSSE 1.0\Presentacion Layer\SIGCOMT.Web\Core\Aspects\GetControllerMethod.cs:línea 14
+2014-10-31 01:04:46,650 [32] ERROR SIGCOMT.Web.Core.Aspects.ControllerAttribute [(null)] - Mensaje: Referencia a objeto no establecida como instancia de un objeto. Trace:    en SIGCOMT.Web.Areas.Administracion.Controllers.FormularioController.<Index>z__OriginalMethod() en d:\Proyectos\OSSE\Template_OSSE\OSSE 1.0\Presentacion Layer\SIGCOMT.Web\Areas\Administracion\Controllers\FormularioController.cs:línea 31
+   en SIGCOMT.Web.Areas.Administracion.Controllers.FormularioController.<Index>c__Binding.Invoke(Object& instance, Arguments arguments, Object aspectArgs) en :línea 0
+   en PostSharp.Aspects.Internals.MethodInterceptionArgsImpl`1.Proceed()
+   en SIGCOMT.Web.Core.Aspects.GetControllerMethod.Procesar(MethodInterceptionArgs args, ILog log) en d:\Proyectos\OSSE\Template_OSSE\OSSE 1.0\Presentacion Layer\SIGCOMT.Web\Core\Aspects\GetControllerMethod.cs:línea 14
+2015-02-08 18:28:04,407 [6] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 18:28:51,460 [6] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 18:29:09,665 [6] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 18:30:06,471 [17] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 18:31:36,634 [5] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 18:39:41,474 [5] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 18:46:46,987 [5] ERROR  [(null)] - Controlador:Account  Action:Login  Mensaje:El valor no puede ser nulo.
+Nombre del parámetro: value
+2015-02-08 19:06:56,136 [6] ERROR  [(null)] - Controlador:Usuario  Action:Edit  Mensaje:El diccionario de parámetros contiene una entrada NULL para el parámetro 'id' del tipo que no acepta valores NULL 'System.Int32' del método 'System.Web.Mvc.ActionResult Edit(Int32)' en 'SIGCOMT.Web.Areas.Administracion.Controllers.UsuarioController'. Un parámetro opcional debe ser un tipo de referencia, un tipo que acepte valores NULL o debe declararse como parámetro opcional.
+Nombre del parámetro: parameters
