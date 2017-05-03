@@ -12,7 +12,6 @@ namespace SIGCOMT.Persistence.DatabaseMappings
             Property(p => p.UserName).IsRequired().HasMaxLength(100);
             Property(p => p.Apellido).HasMaxLength(50);
             Property(p => p.Email).IsRequired().HasMaxLength(50);
-            Property(p => p.Telefono).HasMaxLength(50);
         }
     }
 }

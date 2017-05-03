@@ -116,12 +116,7 @@ namespace SIGCOMT.BusinessLogic
         {
             Usuario user = Get(p => p.UserName == username && p.Estado == (int) TipoEstado.Activo);
 
-            if (user == null)
-            {
-                return null;
-            }
-
-            if (user.UserName == null)
+            if (user?.UserName == null)
             {
                 return null;
             }

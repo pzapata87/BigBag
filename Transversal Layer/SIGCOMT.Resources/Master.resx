@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Acceder" xml:space="preserve">
+    <value>Acceder</value>
+  </data>
   <data name="Aceptar" xml:space="preserve">
     <value>Aceptar</value>
   </data>
@@ -182,6 +185,9 @@
   </data>
   <data name="Quitar" xml:space="preserve">
     <value>Quitar</value>
+  </data>
+  <data name="Recordarme" xml:space="preserve">
+    <value>Recordarme</value>
   </data>
   <data name="Regresar" xml:space="preserve">
     <value>Cancelar</value>

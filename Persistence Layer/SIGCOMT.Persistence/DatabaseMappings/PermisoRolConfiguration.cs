@@ -3,10 +3,11 @@ using SIGCOMT.Domain;
 
 namespace SIGCOMT.Persistence.DatabaseMappings
 {
-    public class PermisoFormularioRolConfiguration : EntityTypeConfiguration<PermisoRol>
+    public class PermisoRolConfiguration : EntityTypeConfiguration<PermisoRol>
     {
-        public PermisoFormularioRolConfiguration()
+        public PermisoRolConfiguration()
         {
+            HasKey(p => new {p.RolId, p.FormularioId});
             HasRequired(p => p.Formulario).WithMany().HasForeignKey(p => p.FormularioId);
             HasRequired(p => p.Rol).WithMany(p => p.PermisoRolList).HasForeignKey(p => p.RolId);
         }

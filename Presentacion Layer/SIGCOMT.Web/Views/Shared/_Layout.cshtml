@@ -45,7 +45,7 @@
             <div class="navbar-header pull-left">
                 <!-- #section:basics/navbar.layout.brand -->
                 <a href="#" class="navbar-brand">
-                    <img src="@Url.Content("~/Content/images/banco-falabella.jpg")" alt="" class="img-responsive" width="150">
+                    @*<img src="@Url.Content("~/Content/images/banco-falabella.jpg")" alt="" class="img-responsive" width="150">*@
                 </a>
             </div>
             <!-- #section:basics/navbar.dropdown -->
@@ -64,7 +64,7 @@
                         <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                             <li>
                                 <a href="@Url.Action("Logout", "Account")">
-                                    <i class="ace-icon fa fa-power-off"></i> @General.Salir
+                                    <i class="ace-icon fa fa-power-off"></i> @Master.CerrarSesion
                                 </a>
                             </li>
                         </ul>
@@ -104,44 +104,16 @@
                 </li>
                 <li class="">
                     <a href="#" class="dropdown-toggle">
-                        <i class="menu-icon fa fa-bar-chart-o"></i>
-                        <span class="menu-text"> Reportes </span>
+                        <i class="menu-icon fa fa-users"></i>
+                        <span class="menu-text"> Seguridad </span>
                         <b class="arrow fa fa-angle-down"></b>
                     </a>
                     <b class="arrow"></b>
                     <ul class="submenu">
                         <li class="">
-                            <a href="@Url.Action("Index", "ContencionReport")">
+                            <a href="@Url.Action("Index", "Usuario")">
                                 <i class="menu-icon fa fa-caret-right"></i>
-                                Avance contención por tramo de mora
-                            </a>
-                            <b class="arrow"></b>
-                        </li>
-                        <li class="">
-                            <a href="@Url.Action("Index", "RollRatesReport")">
-                                <i class="menu-icon fa fa-caret-right"></i>
-                                Roll rates
-                            </a>
-                            <b class="arrow"></b>
-                        </li>
-                        <li class="">
-                            <a href="@Url.Action("Index", "CarteraCastigada")">
-                                <i class="menu-icon fa fa-caret-right"></i>
-                                Seguimiento de recupero cartera castigada
-                            </a>
-                            <b class="arrow"></b>
-                        </li>
-                        <li class="">
-                            <a href="@Url.Action("Index", "RollRatesReport")">
-                                <i class="menu-icon fa fa-caret-right"></i>
-                                Seguimiento de cartera refinanciada
-                            </a>
-                            <b class="arrow"></b>
-                        </li>
-                        <li class="">
-                            <a href="@Url.Action("Index", "RollRatesReport")">
-                                <i class="menu-icon fa fa-caret-right"></i>
-                                Productividad por tramo de mora
+                                Usuarios
                             </a>
                             <b class="arrow"></b>
                         </li>

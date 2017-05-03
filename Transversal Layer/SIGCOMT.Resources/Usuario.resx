@@ -129,6 +129,9 @@
   <data name="CrearUsuario" xml:space="preserve">
     <value>Crear Usuario</value>
   </data>
+  <data name="CredencialesIncorrectas" xml:space="preserve">
+    <value>Credenciales incorrectas</value>
+  </data>
   <data name="EditarUsuario" xml:space="preserve">
     <value>Editar Usuario</value>
   </data>

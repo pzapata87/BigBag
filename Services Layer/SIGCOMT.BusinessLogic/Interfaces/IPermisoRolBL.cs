@@ -8,7 +8,6 @@ namespace SIGCOMT.BusinessLogic.Interfaces
 {
     public interface IPermisoRolBL : IPaging<PermisoRol>
     {
-        PermisoRol GetById(long id);
         PermisoRol Get(Expression<Func<PermisoRol, bool>> where);
         IEnumerable<PermisoRol> GetAll();
         IEnumerable<PermisoRol> GetAll(Expression<Func<PermisoRol, bool>> where);

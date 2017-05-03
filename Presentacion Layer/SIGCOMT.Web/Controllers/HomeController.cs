@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
+using SIGCOMT.Web.Core;
 
 namespace SIGCOMT.Web.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {

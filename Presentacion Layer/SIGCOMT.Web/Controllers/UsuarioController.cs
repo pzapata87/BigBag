@@ -1,43 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using SIGCOMT.BusinessLogic.Core;
 using SIGCOMT.BusinessLogic.Interfaces;
-using SIGCOMT.Cache;
 using SIGCOMT.Common;
 using SIGCOMT.Common.DataTable;
 using SIGCOMT.Common.Enum;
 using SIGCOMT.Domain;
 using SIGCOMT.DTO;
+using SIGCOMT.DTO.AutoMapper;
 using SIGCOMT.Web.Core;
 using SIGCOMT.Web.Core.Aspects;
 
 namespace SIGCOMT.Web.Controllers
 {
-    [Authorize]
     public class UsuarioController : BaseController
     {
         private readonly IUsuarioBL _usuarioBl;
+        private readonly IRolBL _rolBl;
 
-        public UsuarioController(IUsuarioBL usuarioBl)
+        public UsuarioController(IUsuarioBL usuarioBl, IRolBL rolBl)
         {
             _usuarioBl = usuarioBl;
+            _rolBl = rolBl;
         }
 
         public ActionResult Index()
         {
-            var listaIdiomas = new List<ValorHomologacion>();
-
-            GlobalParameters.Idiomas.ToList().ForEach(p => listaIdiomas.Add(new ValorHomologacion
-            {
-                ValorHomologado = Convert.ToString(p.Key),
-                ValorReal = p.Value
-            }));
-
-            var parametrosListado = new Dictionary<string, List<ValorHomologacion>> {{"IdiomaId", listaIdiomas}};
-
-            return View(parametrosListado);
+            return View();
         }
 
         [HttpPost]
@@ -57,15 +47,6 @@ namespace SIGCOMT.Web.Controllers
                     Estado = p.Estado
                 }
             });
-        }
-
-        [Controller(TipoVerbo = TipoAccionControlador.Get)]
-        public ActionResult Edit(int id)
-        {
-            ViewBag.Accion = "Edit";
-
-            //var usuarioActual = UsuarioConverter.DomainToDto(_usuarioBl.GetById(id));
-            return View(); //usuarioActual);
         }
 
         [Controller(TipoVerbo = TipoAccionControlador.Post)]
@@ -96,15 +77,6 @@ namespace SIGCOMT.Web.Controllers
             }
 
             return Json(response, JsonRequestBehavior.AllowGet);
-        }
-
-        [Controller(TipoVerbo = TipoAccionControlador.Get)]
-        public ActionResult Crear()
-        {
-            ViewBag.Accion = "Crear";
-            var usuarioDto = new UsuarioDto();
-
-            return View("Edit", usuarioDto);
         }
 
         [Controller(TipoVerbo = TipoAccionControlador.Post)]
@@ -152,20 +124,35 @@ namespace SIGCOMT.Web.Controllers
 
         [Controller(TipoVerbo = TipoAccionControlador.Post)]
         [HttpPost]
-        public JsonResult ObtenerPermisoFormulario(int usuarioId)
+        public JsonResult GetUsuario(int usuarioId)
         {
             var response = new JsonResponse { Success = false };
             var user = _usuarioBl.GetById(usuarioId);
 
             if (user != null)
             {
-                //response.Data = UsuarioConverter.PermisosFormulario(user.PermisoUsuarioList, user.RolUsuarioList);
+                response.Data = MapperHelper.Map<Usuario, UsuarioDto>(user);
                 response.Success = true;
             }
             else
             {
-                response.Message = "Usuario no existe";
+                response.Message = Resources.Usuario.UsuarioNoRegistrado;
             }
+
+            return Json(response, JsonRequestBehavior.AllowGet);
+        }
+
+        [Controller(TipoVerbo = TipoAccionControlador.Post)]
+        [HttpPost]
+        public JsonResult GetRoles()
+        {
+            var roles = _rolBl.GetAll(p => p.Estado == TipoEstado.Activo.GetNumberValue()).ToList();
+
+            var response = new JsonResponse
+            {
+                Success = true,
+                Data = MapperHelper.Map<List<Rol>, List<RolDto>>(roles)
+            };
 
             return Json(response, JsonRequestBehavior.AllowGet);
         }

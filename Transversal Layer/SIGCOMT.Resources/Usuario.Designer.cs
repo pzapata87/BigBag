@@ -97,6 +97,15 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Credenciales incorrectas.
+        /// </summary>
+        public static string CredencialesIncorrectas {
+            get {
+                return ResourceManager.GetString("CredencialesIncorrectas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Editar Usuario.
         /// </summary>
         public static string EditarUsuario {

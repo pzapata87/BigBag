@@ -20,11 +20,6 @@ namespace SIGCOMT.BusinessLogic
             _permisoRolRepository = permisoRolRepository;
         }
 
-        public PermisoRol GetById(long id)
-        {
-            return _permisoRolRepository.FindOne(p => p.Id == id);
-        }
-
         public PermisoRol Get(Expression<Func<PermisoRol, bool>> where)
         {
             return _permisoRolRepository.FindOne(where);

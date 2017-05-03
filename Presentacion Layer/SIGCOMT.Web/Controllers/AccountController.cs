@@ -55,15 +55,12 @@ namespace SIGCOMT.Web.Controllers
 
                 if (usuario == null)
                 {
-                    ViewBag.MessageError = Resources.Usuario.UsuarioNoRegistrado;
+                    ViewBag.MessageError = Resources.Usuario.CredencialesIncorrectas;
+                    return View(model);
                 }
-                else
-                {
-                    var usuarioDto = MapperHelper.Map<Usuario, UsuarioDto>(usuario);
-                    GenerarTickectAutenticacion(usuarioDto);
 
-                    return RedirectToAction("Index", "Home");
-                }
+                var usuarioDto = MapperHelper.Map<Usuario, UsuarioDto>(usuario);
+                GenerarTickectAutenticacion(usuarioDto);
 
                 return RedirectToAction("Index", "Home");
             }

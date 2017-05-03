@@ -13,7 +13,6 @@ using SIGCOMT.Common.Enum;
 using SIGCOMT.Common.FiltersRules;
 using SIGCOMT.Domain.Core;
 using SIGCOMT.Web.Filters;
-
 namespace SIGCOMT.Web.Core
 {
     [Authorize]
@@ -43,14 +42,14 @@ namespace SIGCOMT.Web.Core
                 var count = configuracionListado.CountMethod(where);
                 OrderColumn ordenamiento = grid.Order.First();
 
-                var currentPage = (grid.Start/grid.Length);
+                var currentPage = (grid.Start / grid.Length);
                 var parametroFiltro = new FilterParameters<T>
                 {
                     ColumnOrder = grid.Columns[ordenamiento.Column].Name,
                     CurrentPage = (currentPage >= 0 ? currentPage : 0) + 1,
                     OrderType =
                         ordenamiento.Dir != null
-                            ? (TipoOrden) Enum.Parse(typeof (TipoOrden), ordenamiento.Dir, true)
+                            ? (TipoOrden)Enum.Parse(typeof(TipoOrden), ordenamiento.Dir, true)
                             : TipoOrden.Asc,
                     WhereFilter = where,
                     AmountRows = grid.Length > 0 ? grid.Length : count
@@ -60,13 +59,13 @@ namespace SIGCOMT.Web.Core
 
                 if (count > 0 && parametroFiltro.AmountRows > 0)
                 {
-                    if (count%parametroFiltro.AmountRows > 0)
+                    if (count % parametroFiltro.AmountRows > 0)
                     {
-                        totalPages = count/parametroFiltro.AmountRows + 1;
+                        totalPages = count / parametroFiltro.AmountRows + 1;
                     }
                     else
                     {
-                        totalPages = count/parametroFiltro.AmountRows;
+                        totalPages = count / parametroFiltro.AmountRows;
                     }
 
                     totalPages = totalPages == 0 ? 1 : totalPages;

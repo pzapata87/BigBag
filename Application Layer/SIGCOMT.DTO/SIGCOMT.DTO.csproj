@@ -45,6 +45,7 @@
     <Compile Include="AutoMapper\DomainToDtoMappingProfile.cs" />
     <Compile Include="AutoMapper\DtoToDomainMappingProfile.cs" />
     <Compile Include="AutoMapper\MapperHelper.cs" />
+    <Compile Include="RolDto.cs" />
     <Compile Include="Core\EntityDto.cs" />
     <Compile Include="FormularioDto.cs" />
     <Compile Include="ModuloDto.cs" />

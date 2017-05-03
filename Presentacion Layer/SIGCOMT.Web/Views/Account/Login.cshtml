@@ -6,8 +6,8 @@
 
 <div class="login-container">
     <div class="center">
-        <img src="@Url.Content("~/Content/images/banco-falabella.jpg")" alt="" class="img-responsive"
-        width="200">
+        @*<img src="@Url.Content("~/Content/images/banco-falabella.jpg")" alt="" class="img-responsive"
+        width="200">*@
     </div>
     <div class="space-6 espacio"></div>
     <div class="position-relative">
@@ -23,7 +23,7 @@
                             <div class="inputs-login">
                                 <label class="block clearfix">
                                     <span class="block input-icon input-icon-right">
-                                        @Html.TextBoxFor(model => model.UserName, new {@placeholder = Usuario.Username, @class = "form-control"})
+                                        @Html.TextBoxFor(model => model.UserName, new {@placeholder = Usuario.UserName_Display, @class = "form-control"})
                                         <span class="add-on"><i class="icon-user"></i></span>
                                         <i class="ace-icon fa fa-user"></i>
                                     </span>
@@ -31,7 +31,7 @@
                                 </label>
                                 <label class="block clearfix">
                                     <span class="block input-icon input-icon-right">
-                                        @Html.PasswordFor(model => model.Password, new {@placeholder = Usuario.Clave, @class = "form-control"})
+                                        @Html.PasswordFor(model => model.Password, new {@placeholder = Usuario.Password_Display, @class = "form-control"})
                                         <span class="add-on"><i class="icon-asterisk"></i></span>
                                         <i class="ace-icon fa fa-lock"></i>
                                     </span>
@@ -46,18 +46,18 @@
                             <div class="space"></div>
                             <div class="clearfix">
                                 <label class="inline">
-                                    <input type="checkbox" class="ace" /> <span class="lbl"> @General.Recordarme</span>
+                                    <input type="checkbox" class="ace" /> <span class="lbl"> @Master.Recordarme</span>
                                 </label>
                                 <button id="btnLogin" type="submit" class="width-100 btn btn-sm btn-success">
                                     <i class="ace-icon fa fa-key"></i>
-                                    <span class="bigger-110">@General.Acceder</span>
+                                    <span class="bigger-110">@Master.Acceder</span>
                                 </button>
                             </div>
                             <div class="space-4"></div>
                         </fieldset>
                     }
                     <div class="center">
-                        <span class="sigcomt"> Copyright &copy; 2017 Sigcomt SAC. Todos los derechos reservados</span>
+                        <span class="sigcomt"> Copyright &copy; 2017 NEGASAC. Todos los derechos reservados</span>
                     </div>
                     <div class="space-6"></div>
                 </div>

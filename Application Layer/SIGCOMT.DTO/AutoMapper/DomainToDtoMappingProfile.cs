@@ -9,6 +9,7 @@ namespace SIGCOMT.DTO.AutoMapper
         {
             CreateMap<Usuario, UsuarioDto>()
                 .ForMember(p => p.NombreCompleto, q => q.MapFrom(x => x.Nombre + " " + x.Apellido));
+            CreateMap<Rol, RolDto>();
         }
     }
 }
