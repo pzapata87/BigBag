@@ -44,6 +44,7 @@ namespace SIGCOMT.Web.Controllers
                     Email = p.Email,
                     Nombre = p.Nombre,
                     Apellido = p.Apellido,
+                    RolNombre = p.RolUsuarioList.First().Rol.Nombre,
                     Estado = p.Estado
                 }
             });
@@ -146,7 +147,7 @@ namespace SIGCOMT.Web.Controllers
         [HttpPost]
         public JsonResult GetRoles()
         {
-            var roles = _rolBl.GetAll(p => p.Estado == TipoEstado.Activo.GetNumberValue()).ToList();
+            var roles = _rolBl.GetAll().ToList();
 
             var response = new JsonResponse
             {

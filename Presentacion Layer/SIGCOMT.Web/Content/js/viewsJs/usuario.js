@@ -6,9 +6,9 @@ var usuarioJs = function () {
     var urlGetUser;
 	var roles;
 	var actions = {
-	    crear: { codigo: "1", uri: ""},
-	    editar: { codigo: "2", uri: "" },
-	    eliminar: { codigo: "3", uri: "" }
+	    crear: { codigo: 1, uri: ""},
+	    editar: { codigo: 2, uri: "" },
+	    eliminar: { codigo: 3, uri: "" }
 	};
 
 	function initializeGrid() {
@@ -69,11 +69,11 @@ var usuarioJs = function () {
                     searchable: false,
                     width: "10%"
                 },
-                { data: "Id", visible: false, searchable: false },
-                { data: "UserName", width: "15%" },
-                { data: "Nombre" },
-                { data: "Apellido" },
-                { data: "Email" }
+                { data: "Id", name: "Id", visible: false, searchable: false },
+                { data: "UserName", name: "UserName", width: "15%" },
+                { data: "Nombre", name: "Nombre" },
+                { data: "Apellido", name: "Apellido" },
+                { data: "RolNombre", name: "RolNombre", orderable: false, searchable: false }
 	        ],
 	        columnDefs: [
                 {
@@ -92,15 +92,15 @@ var usuarioJs = function () {
 	        parametros: { usuarioId: usuarioId },
 	        success: function (response) {
 	            webApp.clearForm("#frmUsuario");
-	            if (response.success) {
-	                $("#frmUsuario #usuarioId").val(response.data.id);
-	                $("#frmUsuario #userName").val(response.data.userName);
-	                $("#frmUsuario #nombre").val(response.data.nombre);
-	                $("#frmUsuario #apellido").val(response.data.apellido);
-	                $("#frmUsuario #rolId").val(response.data.rol.id);
+	            if (response.Success) {
+	                $("#frmUsuario #usuarioId").val(response.Data.Id);
+	                $("#frmUsuario #userName").val(response.Data.UserName);
+	                $("#frmUsuario #nombre").val(response.Data.Nombre);
+	                $("#frmUsuario #apellido").val(response.Data.Apellido);
+	                $("#frmUsuario #rolId").val(response.Data.RolId);
 
 	                $("#divUsuario").modal("show");
-	                $('#frmUsuario').valid();
+	                //$('#frmUsuario').valid();
 	            } else {
 	                $.gritter.add({
 	                    title: 'Error',
@@ -116,15 +116,15 @@ var usuarioJs = function () {
 	    webApp.Ajax({
 	        url: urlRoles,
 	        success: function (response) {
-	            if (response.success) {
-	                roles = response.data;
+	            if (response.Success) {
+	                roles = response.Data;
 	                if (roles) {
 	                    $.each(roles, function (index, item) {
 	                        $("#frmUsuario #rolId")
-	                            .append("<option>", {
-	                                value: item.id,
-	                                text: item.nombre
-	                            });
+	                            .append($("<option>", {
+	                                value: item.Id,
+	                                text: item.Nombre
+	                            }));
 	                    });
 	                }
 	                if (opciones.success != null && typeof (opciones.success) == "function") {
@@ -151,10 +151,10 @@ var usuarioJs = function () {
         	$("#btnGuardar").data('action', actions.crear);
         });
         
-        $("#usuarioDataTable").on("click", "a[data-info]", function () {
+        $("#dtUsuario").on("click", "a[data-info]", function () {
         	var usuarioId = $(this).data('info');
         	
-        	if($(this).data('action') === actions.editar){
+        	if($(this).data('action') === actions.editar.codigo){
 	        	if(roles == null) {
 	        		getRoles({
 	        			success: function (){
@@ -164,19 +164,20 @@ var usuarioJs = function () {
 	        	} else {
 	        		getDatosUsuario(usuarioId);
 	        	}	        	
-	        	$("#btnGuardar").data('action', actions.editar);
+	        	$("#btnGuardar").data('action', actions.editar.codigo);
         	} else {
         		webApp.showConfirmDialog(function () {
         			webApp.Ajax({
         			    url: actions.eliminar.uri,
-                        parametros: { usuarioId: usuarioId },
+                        parametros: { id: usuarioId },
                         success: function(response) {
-                            if (response.success) {
+                            if (response.Success) {
                             	$.gritter.add({
             	    				title: 'Informaci&oacute;n',
             	    				text: 'Los datos se eliminaron correctamente.',
             	    				class_name: 'gritter-success'
-            	    			});
+                            	});
+                            	dtUsuario.ajax.reload();
                             } else {
                             	$.gritter.add({
             	    				title: 'Error',
@@ -205,7 +206,7 @@ var usuarioJs = function () {
         		    url: url,
                     parametros: form.data,
                     success: function(response) {
-                        if (response.success) {
+                        if (response.Success) {
                         	$.gritter.add({
         	    				title: 'Informaci&oacute;n',
         	    				text: 'Los datos se guardaron correctamente.',
