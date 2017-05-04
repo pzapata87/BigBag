@@ -31,6 +31,8 @@ namespace SIGCOMT.DTO
         public string Apellido { get; set; }
 
         public string NombreCompleto { get; set; }
+        public string RolNombre { get; set; }
+        public int RolId { get; set; }
         public int Estado { get; set; }
     }
 }
