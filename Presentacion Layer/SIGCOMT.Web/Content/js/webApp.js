@@ -216,12 +216,12 @@ var webApp = function () {
 
             btnSuccess.off('click');
             if ($.isFunction(fnSuccess)) {
-                btnSuccess.on('click', function () { fnSuccess(); })
+                btnSuccess.on('click', function() { fnSuccess(); });
             }
 
             btnCancel.off('click');
             if ($.isFunction(fnCancel)) {
-                btnCancel.on('click', function () { fnCancel(); })
+                btnCancel.on('click', function() { fnCancel(); });
             }
 
             if (message != null && message != '') {
@@ -289,7 +289,9 @@ var webApp = function () {
                 contentType: opciones.contentType,
                 dataType: opciones.datatype,
                 async: opciones.async,
-                data: opciones.datatype == "json" ? JSON.stringify(opciones.parametros) : opciones.parametros,
+                data: (opciones.datatype == "json" && (opciones.convertToJson == null || opciones.convertToJson === true))
+                    ? JSON.stringify(opciones.parametros)
+                    : opciones.parametros,
                 success: function (response) {
                     if (opciones.success != null && typeof (opciones.success) == "function")
                     	opciones.success(response);

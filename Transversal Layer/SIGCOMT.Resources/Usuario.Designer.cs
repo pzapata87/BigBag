@@ -70,7 +70,16 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El apellido puede tener un máximo de 50 caracteres..
+        ///   Busca una cadena traducida similar a Apellido es requerido..
+        /// </summary>
+        public static string Apellido_Required {
+            get {
+                return ResourceManager.GetString("Apellido_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Apellido puede tener un máximo de 50 caracteres..
         /// </summary>
         public static string Apellido_StringLength {
             get {
@@ -124,7 +133,7 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El email ingresado es incorrecto..
+        ///   Busca una cadena traducida similar a Email ingresado es incorrecto..
         /// </summary>
         public static string Email_EmailAddress {
             get {
@@ -133,7 +142,7 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El email es requerido..
+        ///   Busca una cadena traducida similar a Email es requerido..
         /// </summary>
         public static string Email_Required {
             get {
@@ -169,7 +178,16 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El nombre puede tener un máximo de 30 caracteres..
+        ///   Busca una cadena traducida similar a Nombre es requerido..
+        /// </summary>
+        public static string Nombre_Required {
+            get {
+                return ResourceManager.GetString("Nombre_Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre puede tener un máximo de 30 caracteres..
         /// </summary>
         public static string Nombre_StringLength {
             get {
@@ -187,7 +205,7 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a La contraseña es requerida..
+        ///   Busca una cadena traducida similar a Contraseña es requerida..
         /// </summary>
         public static string Password_Required {
             get {
@@ -196,7 +214,7 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a La contraseña debe tener 4 caracteres como mínimo..
+        ///   Busca una cadena traducida similar a Contraseña debe tener 4 caracteres como mínimo..
         /// </summary>
         public static string Password_StringLength {
             get {
@@ -214,56 +232,20 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Telefono.
+        ///   Busca una cadena traducida similar a Rol.
         /// </summary>
-        public static string Telefono_Display {
+        public static string RolId_Display {
             get {
-                return ResourceManager.GetString("Telefono_Display", resourceCulture);
+                return ResourceManager.GetString("RolId_Display", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El teléfono puede tener un máximo de 15 caracteres..
+        ///   Busca una cadena traducida similar a Rol es requerido..
         /// </summary>
-        public static string Telefono_StringLength {
+        public static string RolId_Required {
             get {
-                return ResourceManager.GetString("Telefono_StringLength", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Usuario.
-        /// </summary>
-        public static string TituloAlertaMantenimientos {
-            get {
-                return ResourceManager.GetString("TituloAlertaMantenimientos", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Usuarios.
-        /// </summary>
-        public static string TituloListado {
-            get {
-                return ResourceManager.GetString("TituloListado", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Usuario.
-        /// </summary>
-        public static string TituloNotificacion_submit {
-            get {
-                return ResourceManager.GetString("TituloNotificacion_submit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Formulario de información del usuario.
-        /// </summary>
-        public static string TituloPanelEdicion {
-            get {
-                return ResourceManager.GetString("TituloPanelEdicion", resourceCulture);
+                return ResourceManager.GetString("RolId_Required", resourceCulture);
             }
         }
         
@@ -277,7 +259,7 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El nombre de usuario es requerido..
+        ///   Busca una cadena traducida similar a Username es requerido..
         /// </summary>
         public static string UserName_Required {
             get {
@@ -286,7 +268,7 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a El nombre de usuario debe tener 6 caracteres como mínimo..
+        ///   Busca una cadena traducida similar a Username debe tener 6 caracteres como mínimo..
         /// </summary>
         public static string UserName_StringLength {
             get {

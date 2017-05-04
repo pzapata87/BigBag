@@ -183,6 +183,9 @@
   <data name="Nuevo" xml:space="preserve">
     <value>Nuevo</value>
   </data>
+  <data name="OcurrioError" xml:space="preserve">
+    <value>Ocurrio un error al cargar...</value>
+  </data>
   <data name="Quitar" xml:space="preserve">
     <value>Quitar</value>
   </data>

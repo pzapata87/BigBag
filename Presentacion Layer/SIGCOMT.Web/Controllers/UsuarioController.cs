@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using SIGCOMT.BusinessLogic.Core;
@@ -83,21 +84,29 @@ namespace SIGCOMT.Web.Controllers
         [Controller(TipoVerbo = TipoAccionControlador.Post)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public JsonResult Crear(UsuarioDto usuarioDto)
+        public JsonResult Crear(UsuarioDto userDto)
         {
             var response = new JsonResponse { Success = false };
 
-            var entityTemp =
-                        _usuarioBl.Get(
-                            p => p.UserName == usuarioDto.UserName && p.Estado == (int)TipoEstado.Activo);
+            var entityTemp = _usuarioBl.Get(p => p.UserName == userDto.UserName && p.Estado == (int)TipoEstado.Activo);
 
             if (entityTemp == null)
             {
-                var usuarioDomain = new Usuario { Estado = (int)TipoEstado.Activo };
+                var userDomain = MapperHelper.Map<UsuarioDto, Usuario>(userDto);
+                Guid guid = Guid.NewGuid();
+                var password = guid.ToString().Split('-')[1];
+                userDomain.Password = Encriptador.Encriptar(password);
 
-               // UsuarioConverter.DtoToDomain(usuarioDomain, usuarioDto);
+                userDomain.RolUsuarioList = new List<RolUsuario>
+                {
+                    new RolUsuario
+                    {
+                        RolId = userDto.RolId,
+                        Estado = TipoEstado.Activo.GetNumberValue()
+                    }
+                };
 
-                _usuarioBl.Add(usuarioDomain);
+                _usuarioBl.Add(userDomain);
 
                 response.Message = "Se registró el usuario correctamente";
                 response.Success = true;

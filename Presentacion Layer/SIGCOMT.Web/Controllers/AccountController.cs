@@ -10,7 +10,6 @@ using SIGCOMT.Web.Helpers;
 
 namespace SIGCOMT.Web.Controllers
 {
-    [Authorize]
     public class AccountController : BaseController
     {
         #region Propiedades
@@ -67,7 +66,8 @@ namespace SIGCOMT.Web.Controllers
             catch (Exception ex)
             {
                 LogError(ex);
-                return MensajeError();
+                ViewBag.MessageError = Resources.Master.OcurrioError;
+                return View(model);
             }
         }
 

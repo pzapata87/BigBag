@@ -93,11 +93,11 @@ var usuarioJs = function () {
 	        success: function (response) {
 	            webApp.clearForm("#frmUsuario");
 	            if (response.Success) {
-	                $("#frmUsuario #usuarioId").val(response.Data.Id);
-	                $("#frmUsuario #userName").val(response.Data.UserName);
-	                $("#frmUsuario #nombre").val(response.Data.Nombre);
-	                $("#frmUsuario #apellido").val(response.Data.Apellido);
-	                $("#frmUsuario #rolId").val(response.Data.RolId);
+	                $("#frmUsuario #Id").val(response.Data.Id);
+	                $("#frmUsuario #UserName").val(response.Data.UserName);
+	                $("#frmUsuario #Nombre").val(response.Data.Nombre);
+	                $("#frmUsuario #Apellido").val(response.Data.Apellido);
+	                $("#frmUsuario #RolId").val(response.Data.RolId);
 
 	                $("#divUsuario").modal("show");
 	                //$('#frmUsuario').valid();
@@ -120,7 +120,7 @@ var usuarioJs = function () {
 	                roles = response.Data;
 	                if (roles) {
 	                    $.each(roles, function (index, item) {
-	                        $("#frmUsuario #rolId")
+	                        $("#frmUsuario #RolId")
 	                            .append($("<option>", {
 	                                value: item.Id,
 	                                text: item.Nombre
@@ -140,12 +140,13 @@ var usuarioJs = function () {
         	webApp.clearForm("#frmUsuario");
         	if(roles == null) {
         		getRoles({
-        			success: function (){
+        		    success: function () {
+        		        $('#frmUsuario #Id').val("0");
         				$("#divUsuario").modal("show");
         			}
         		});
         	} else {
-        		$('#frmUsuario #rolId').val("");
+        		$('#frmUsuario #RolId').val("");
         		$("#divUsuario").modal("show");
         	}
         	$("#btnGuardar").data('action', actions.crear);
@@ -164,7 +165,7 @@ var usuarioJs = function () {
 	        	} else {
 	        		getDatosUsuario(usuarioId);
 	        	}	        	
-	        	$("#btnGuardar").data('action', actions.editar.codigo);
+	        	$("#btnGuardar").data('action', actions.editar);
         	} else {
         		webApp.showConfirmDialog(function () {
         			webApp.Ajax({
@@ -199,11 +200,13 @@ var usuarioJs = function () {
         	}        	
         	
         	var form = webApp.getDataForm($form);
-            var url = $(this).data('action') === actions.crear.codigo ? actions.crear.uri : actions.editar.uri;
+            var url = $(this).data('action').uri;
         	
-        	webApp.showConfirmDialog(function() {
+            webApp.showConfirmDialog(function () {
         		webApp.Ajax({
         		    url: url,
+        		    convertToJson: false,
+        		    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
                     parametros: form.data,
                     success: function(response) {
                         if (response.Success) {

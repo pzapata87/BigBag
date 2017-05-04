@@ -259,6 +259,15 @@ namespace SIGCOMT.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Ocurrio un error al cargar....
+        /// </summary>
+        public static string OcurrioError {
+            get {
+                return ResourceManager.GetString("OcurrioError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Quitar.
         /// </summary>
         public static string Quitar {
