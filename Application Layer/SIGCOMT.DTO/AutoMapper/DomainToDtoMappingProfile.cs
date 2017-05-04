@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
 using SIGCOMT.Domain;
 
 namespace SIGCOMT.DTO.AutoMapper
@@ -9,8 +8,7 @@ namespace SIGCOMT.DTO.AutoMapper
         public DomainToDtoMappingProfile()
         {
             CreateMap<Usuario, UsuarioDto>()
-                .ForMember(p => p.NombreCompleto, q => q.MapFrom(x => x.Nombre + " " + x.Apellido))
-                .ForMember(p => p.RolId, q => q.MapFrom(x => x.RolUsuarioList.First().RolId));
+                .ForMember(p => p.NombreCompleto, q => q.MapFrom(x => x.Nombre + " " + x.Apellido));
             CreateMap<Rol, RolDto>();
         }
     }

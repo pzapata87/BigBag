@@ -45,7 +45,7 @@ namespace SIGCOMT.Web.Controllers
                     Email = p.Email,
                     Nombre = p.Nombre,
                     Apellido = p.Apellido,
-                    RolNombre = p.RolUsuarioList.First().Rol.Nombre,
+                    RolNombre = p.Rol.Nombre,
                     Estado = p.Estado
                 }
             });
@@ -96,15 +96,6 @@ namespace SIGCOMT.Web.Controllers
                 Guid guid = Guid.NewGuid();
                 var password = guid.ToString().Split('-')[1];
                 userDomain.Password = Encriptador.Encriptar(password);
-
-                userDomain.RolUsuarioList = new List<RolUsuario>
-                {
-                    new RolUsuario
-                    {
-                        RolId = userDto.RolId,
-                        Estado = TipoEstado.Activo.GetNumberValue()
-                    }
-                };
 
                 _usuarioBl.Add(userDomain);
 

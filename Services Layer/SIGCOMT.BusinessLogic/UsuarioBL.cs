@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using SIGCOMT.Aspects;
@@ -36,55 +35,9 @@ namespace SIGCOMT.BusinessLogic
 
         [TryCatch(ExceptionTypeExpected = typeof (Exception), RethrowException = true)]
         [CommitsOperation]
-        public void Add(Usuario entity, IList<int> listaRolSelected)
-        {
-            foreach (int item in listaRolSelected)
-            {
-                var rolUsuario = new RolUsuario {RolId = item, Estado = (int) TipoEstado.Activo};
-                if (entity.RolUsuarioList == null) entity.RolUsuarioList = new List<RolUsuario>();
-
-                entity.RolUsuarioList.Add(rolUsuario);
-            }
-
-            _usuarioRepository.Add(entity);
-        }
-
-        [TryCatch(ExceptionTypeExpected = typeof (Exception), RethrowException = true)]
-        [CommitsOperation]
         public void Update(Usuario entity)
         {
             _usuarioRepository.Update(entity);
-        }
-
-        [TryCatch(ExceptionTypeExpected = typeof (Exception), RethrowException = true)]
-        [CommitsOperation]
-        public void Update(Usuario entity, IList<int> listaRoleSelected)
-        {
-            Usuario usuario = _usuarioRepository.FindOne(entity.Id);
-            usuario.RolUsuarioList.ToList().ForEach(p => p.Estado = (int) TipoEstado.Inactivo);
-
-            foreach (int item in listaRoleSelected)
-            {
-                RolUsuario usuarioRol = usuario.RolUsuarioList.FirstOrDefault(p => p.RolId == item);
-                if (usuarioRol != null)
-                    usuarioRol.Estado = (int) TipoEstado.Activo;
-                else
-                {
-                    var rolUsuario = new RolUsuario {RolId = item, Estado = (int) TipoEstado.Activo};
-                    usuario.RolUsuarioList.Add(rolUsuario);
-                }
-            }
-
-            List<RolUsuario> listaRolesEliminar = usuario.RolUsuarioList.Where(p => p.Estado == (int) TipoEstado.Inactivo).ToList();
-            int cantidadItemsEliminar = listaRolesEliminar.Count();
-            int iterator = 0;
-
-            while (iterator < cantidadItemsEliminar)
-            {
-                usuario.RolUsuarioList.Remove(listaRolesEliminar[iterator++]);
-            }
-
-            _usuarioRepository.Update(usuario);
         }
 
         [TryCatch(ExceptionTypeExpected = typeof (Exception), RethrowException = true)]

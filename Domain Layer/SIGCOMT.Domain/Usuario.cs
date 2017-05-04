@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using SIGCOMT.Domain.Core;
+﻿using SIGCOMT.Domain.Core;
 
 namespace SIGCOMT.Domain
 {
@@ -10,7 +9,8 @@ namespace SIGCOMT.Domain
         public string Password { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
+        public int RolId { get; set; }
 
-        public virtual ICollection<RolUsuario> RolUsuarioList { get; set; }
+        public virtual Rol Rol { get; set; }
     }
 }

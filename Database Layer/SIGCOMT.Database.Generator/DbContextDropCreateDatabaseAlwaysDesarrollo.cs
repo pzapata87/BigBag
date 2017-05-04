@@ -136,10 +136,7 @@ namespace SIGCOMT.DataBase.Generator
                 Password = Encriptador.Encriptar("1234"),
                 Email = "admin@sigcomt.com",
                 Estado = TipoEstado.Activo.GetNumberValue(),
-                RolUsuarioList = new[]
-                {
-                    new RolUsuario {Rol = _rolAdmin, Estado = TipoEstado.Activo.GetNumberValue()}
-                }
+                Rol = _rolAdmin
             };
 
             context.Set<Usuario>().Add(usuario);

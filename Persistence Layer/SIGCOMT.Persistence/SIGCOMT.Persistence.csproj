@@ -74,7 +74,6 @@
     <Compile Include="DatabaseMappings\ItemTablaConfiguration.cs" />
     <Compile Include="DatabaseMappings\PermisoRolConfiguration.cs" />
     <Compile Include="DatabaseMappings\RolConfiguration.cs" />
-    <Compile Include="DatabaseMappings\RolUsuarioConfiguration.cs" />
     <Compile Include="DatabaseMappings\TablaConfiguration.cs" />
     <Compile Include="DatabaseMappings\UsuarioConfiguration.cs" />
     <Compile Include="EntityFramework\AutoMapper.cs" />
