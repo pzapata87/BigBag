@@ -54,17 +54,6 @@ namespace SIGCOMT.Common
             return value.ToString();
         }
 
-        /// <summary>
-        ///     Pone nombre al reporte basado en fecha actual
-        /// </summary>
-        /// <param name="name">Nombre del reporte</param>
-        /// <returns></returns>
-        public static string GetReporteName(string name)
-        {
-            return string.Format("{0}_{1}{2}{3}{4}{5}{6}", name, DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, DateTime.Now.Hour,
-                DateTime.Now.Minute, DateTime.Now.Second);
-        }
-
         #region Ip y HostName Local
 
         public static string IpCliente
@@ -79,10 +68,7 @@ namespace SIGCOMT.Common
             }
         }
 
-        public static string HostName
-        {
-            get { return Dns.GetHostName(); }
-        }
+        public static string HostName => Dns.GetHostName();
 
         #endregion
 

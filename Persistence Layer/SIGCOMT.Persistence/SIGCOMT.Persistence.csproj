@@ -72,6 +72,7 @@
     <Compile Include="Core\RepositoryWithTypedId.cs" />
     <Compile Include="DatabaseMappings\FormularioConfiguration.cs" />
     <Compile Include="DatabaseMappings\ItemTablaConfiguration.cs" />
+    <Compile Include="DatabaseMappings\OrdenPedidoSapConfiguration.cs" />
     <Compile Include="DatabaseMappings\PermisoRolConfiguration.cs" />
     <Compile Include="DatabaseMappings\RolConfiguration.cs" />
     <Compile Include="DatabaseMappings\TablaConfiguration.cs" />
